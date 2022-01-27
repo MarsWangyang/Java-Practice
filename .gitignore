@@ -1,0 +1,14 @@
+.DS_Store
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+out
+.idea
+30Training.iml
+Demo01Const
+
+
