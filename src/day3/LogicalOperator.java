@@ -14,11 +14,12 @@ public class LogicalOperator {
         boolean b1 = true;
         int num1 = 10;
         if (b1 & (num1++ > 0)) {
-            System.out.println("This is & display11.");
+            System.out.println("This is & display11."); // Show Up!
         } else {
             System.out.println("This is & display12.");
         }
         // num1 = 11
+
         boolean b2 = true;
         int num2 = 10;
         if (b2 && (num2++ > 0)) {
@@ -36,6 +37,7 @@ public class LogicalOperator {
             System.out.println("This is & display32.");
         }
         // num3 = 11
+
         boolean b4 = true;
         int num4 = 10;
         if (b4 && (num4++ > 0)) {
@@ -43,11 +45,12 @@ public class LogicalOperator {
         } else {
             System.out.println("This is & display42.");
         }
-        // num4 = 10 --> Already know that b4 = false, so the statement (num4++ > 0) will not compile
-
+        // num4 = 10 --> Already know that b4 = false, so the statement (num4++ > 0)
+        // will not compile
 
         // Difference between | and ||:
-        // when the statement on the left hand is true, | will keep compiling till the right hand side statement finish
+        // when the statement on the left hand is true, | will keep compiling till the
+        // right hand side statement finish
         // but || will no longer run the code on the right hand side.
     }
 }
