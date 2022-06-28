@@ -2,7 +2,7 @@ package OOP;
 
 /**
  * 可變個數的parameters, Varargs (variable number of arguments):
- * 允許直接定義和多個argumnet(實參)相匹配的parameters(形參0
+ * 允許直接定義和多個argument(實參)相匹配的parameters(形參)
  * 
  * 1. 具體使用:
  * 1.1 格式：dataType ... parametersName

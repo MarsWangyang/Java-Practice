@@ -21,56 +21,56 @@ public class This {
     }
 }
 
-class Person {
-    private String name;
-    private int age;
+// class Person {
+// private String name;
+// private int age;
 
-    public Person() {
-        this.eat();
-        // Person initialzation的時候，需要考慮... (共 40 lines)
-    }
+// public Person() {
+// this.eat();
+// // Person initialzation的時候，需要考慮... (共 40 lines)
+// }
 
-    public Person(String name) {
-        this(); // 這樣就會去調用Person()當中的所有code
-        this.name = name;
-        // Person initialzation的時候，需要考慮... (共 40 lines)
-    }
+// public Person(String name) {
+// this(); // 這樣就會去調用Person()當中的所有code
+// this.name = name;
+// // Person initialzation的時候，需要考慮... (共 40 lines)
+// }
 
-    public Person(int age) {
-        this();
-        this.age = age;
-        // Person initialzation的時候，需要考慮... (共 40 lines)
-    }
+// public Person(int age) {
+// this();
+// this.age = age;
+// // Person initialzation的時候，需要考慮... (共 40 lines)
+// }
 
-    public Person(String name, int age) {
-        this(age); // 這樣會去調用public Person(int age)這個constructor
-        this.name = name;
-        // Person initialzation的時候，需要考慮... (共 40 lines)
-    }
+// public Person(String name, int age) {
+// this(age); // 這樣會去調用public Person(int age)這個constructor
+// this.name = name;
+// // Person initialzation的時候，需要考慮... (共 40 lines)
+// }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+// public void setName(String name) {
+// this.name = name;
+// }
 
-    public String getName() {
-        return name;
-    }
+// public String getName() {
+// return name;
+// }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+// public void setAge(int age) {
+// this.age = age;
+// }
 
-    public int getAge() {
-        return age;
-    }
+// public int getAge() {
+// return age;
+// }
 
-    public void eat() {
-        System.out.println("Person eats");
-        this.drink();
-    }
+// public void eat() {
+// System.out.println("Person eats");
+// this.drink();
+// }
 
-    public void drink() {
-        System.out.println(
-                "Person drinks");
-    }
-}
+// public void drink() {
+// System.out.println(
+// "Person drinks");
+// }
+// }
