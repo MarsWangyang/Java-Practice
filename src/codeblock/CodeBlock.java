@@ -8,7 +8,7 @@ package codeblock;
  * 3. 分類：
  * - 靜態(static)代碼塊：
  *      > 內部可以有輸出語句
- *      > 隨著class的加載而執行，而且只會執行一次
+ *      > 隨著"class的加載"而執行，而且只會執行"一次"
  *      > 作用：初始化類的屬性
  *      > 如果一個class中定義了多個static代碼塊，則按照declare的先後順序執行
  *      > 靜態代碼塊的執行需要比non-static代碼塊更優先執行
@@ -16,7 +16,7 @@ package codeblock;
  * 
  * - 非靜態代碼塊：
  *      > 內部可以有輸出語句
- *      > 隨著對象的創建而執行
+ *      > 隨著"對象"的創建而執行
  *      > 每創建一個對象，就執行一次非靜態代碼塊
  *      > 作用：可以在創建對象的時候，對object的屬性進行初始化
  *      > 如果一個class定義了多個non-static代碼塊，則按照的先後順序執行
@@ -27,11 +27,13 @@ package codeblock;
  *  2. 顯式初始化 or 在代碼塊中賦值 (會依照兩個的先後順序而有差異)
  *  3. 構造器中初始化
  *  4. 有了對象以後，可以通過"對象.field" or "object.method"的方法，進行賦值
+ *  
+ *  1 -> 2/5 -> 3 -> 4
  */
 public class CodeBlock {
     public static void main(String[] args) {
-        String desc = Person.desc; // hello, static block
-        System.out.println(desc); // I am a guy.
+        String desc = Person.desc; // hello, static block - 1 跟 hello, static block - 2
+        System.out.println(desc); // I am a guy2.
 
         Person p1 = new Person(); // hello, non static block
         Person p2 = new Person(); // hello, non static block
@@ -60,11 +62,11 @@ class Person {
     // static代碼塊
     static {
         System.out.println("hello, static block - 1");
-        desc = "I am a guy.";
+        desc = "I am a guy 1.";
     }
     static {
         System.out.println("hello, static block - 2");
-
+        desc = "I am a guy2.";
     }
 
     // 非靜態代碼塊
