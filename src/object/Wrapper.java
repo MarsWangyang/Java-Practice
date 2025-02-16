@@ -61,11 +61,11 @@ public class Wrapper {
 
     // 包裝類 --> 基本數據類型: 調用xxxValue()
     public void test2() {
-        Integer in1 = new Integer(12);
+        Integer in1 = Integer.valueOf(12);
         int i1 = in1.intValue();
         System.out.println(i1 + 1); // 13
 
-        Float f1 = new Float(12.2);
+        Float f1 = Float.valueOf(12.2f);
         float f2 = f1.floatValue();
         System.out.println(f2 + 1);
     }
@@ -73,45 +73,45 @@ public class Wrapper {
     // 基本數據類型 --> 包裝類
     public void test1() {
         int num1 = 10;
-        Integer in1 = new Integer(num1);
+        Integer in1 = Integer.valueOf(num1);
         System.out.println(in1.toString());
 
-        Integer in2 = new Integer("123");
+        Integer in2 = Integer.valueOf("123");
         System.out.println(in2.toString());
 
-        // Error
-        Integer in3 = new Integer("123abc");
+        // Error case - will throw NumberFormatException
+        Integer in3 = Integer.valueOf("123abc");
         System.out.println(in3.toString());
 
-        Float f1 = new Float(12.3f);
-        Float f2 = new Float("12.4");
+        Float f1 = Float.valueOf(12.3f);
+        Float f2 = Float.valueOf("12.4");
         System.out.println(f1);
         System.out.println(f2);
 
-        Boolean b1 = new Boolean(true);
-        Boolean b2 = new Boolean("TruE");
+        Boolean b1 = Boolean.valueOf(true);
+        Boolean b2 = Boolean.valueOf("TruE");
         System.out.println(b2); // true
 
-        Boolean b3 = new Boolean("true123");
+        Boolean b3 = Boolean.valueOf("true123");
         System.out.println(b3); // false
 
     }
 
     public void interviewQ() {
 
-        Object o1 = true ? new Integer(1) : new Double(2.0);
+        Object o1 = true ? Integer.valueOf(1) : Double.valueOf(2.0);
         System.out.println(o1); // 1.0 --> 這樣的statement後面兩個判斷式需要相同類型，因此拿了range較大的Double
 
         Object o2;
         if (true) {
-            o2 = new Integer(1);
+            o2 = Integer.valueOf(1);
         } else {
-            o2 = new Double(2.0);
+            o2 = Double.valueOf(2.0);
         }
         System.out.println(o2); // 1
 
-        Integer i = new Integer(1);
-        Integer j = new Integer(1);
+        Integer i = Integer.valueOf(1);
+        Integer j = Integer.valueOf(1);
         System.out.println(i == j);// false --> address
 
         // Integer 內部定義了IntegerCache結構。IntegerCache中定義了Integer[],

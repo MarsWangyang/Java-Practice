@@ -29,6 +29,7 @@ public class ToString {
 
         Date date = new Date(34232525L);
         System.out.println(date); // 時間
+        System.out.println(date.toString());
     }
 }
 

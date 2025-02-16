@@ -74,7 +74,6 @@ class Customer {
             // return true;
             // } else {
             // return false;
-
             // }
             return this.age == cust.age && this.name.equals(cust.name);
         }
