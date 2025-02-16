@@ -27,6 +27,8 @@ public class LogicalOperator {
         } else {
             System.out.println("This is & display22.");
         }
+
+        System.out.println(num2);
         // num2 = 11
 
         boolean b3 = false;
@@ -38,7 +40,7 @@ public class LogicalOperator {
         }
         // num3 = 11
 
-        boolean b4 = true;
+        boolean b4 = false;
         int num4 = 10;
         if (b4 && (num4++ > 0)) {
             System.out.println("This is & display41.");

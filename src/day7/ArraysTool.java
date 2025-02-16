@@ -10,10 +10,14 @@ public class ArraysTool {
     public static void main(String[] args) {
         int[] arr1 = new int[] { 1, 2, 3, 4 };
         int[] arr2 = new int[] { 1, 3, 4, 2 };
+        int[] arr2_1 = new int[] { 1, 3, 4, 2 };
 
         // isEquals (boolean)
         boolean isEquals = Arrays.equals(arr1, arr2);
         System.out.println("isEquals: " + isEquals);
+        System.out.println("isEquals: " + Arrays.equals(arr2, arr2_1));
+        System.out.println(System.identityHashCode(arr2)); // 859417998
+        System.out.println(System.identityHashCode(arr2_1)); // 5592464
 
         // toString (String)
         System.out.println(Arrays.toString(arr1));

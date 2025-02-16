@@ -20,6 +20,6 @@ public class ArrayException {
 
         // case3:
         String[] arr3 = new String[] { "a", "b", "c" };
-        System.out.println(arr3[0].toString()); // Error
+        System.out.println(arr3[0].toString()); // a
     }
 }
